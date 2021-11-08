@@ -292,3 +292,10 @@ body {
   max-width: 600px;
   margin: 0 auto;
 }
+
+.primary {
+  color: var(--primary-500);
+}
+.black {
+  color: #222;
+}

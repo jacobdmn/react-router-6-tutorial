@@ -1,31 +1,41 @@
 import { Outlet, NavLink } from 'react-router-dom'
-const PageLayout = () => {
+
+const Dashboard = ({ setCurrentUser }) => {
   return (
-    <main>
-      <nav style={{ display: 'flex', gap: '1rem', marginBottom: '2rem' }}>
+    <main
+      style={{
+        display: 'grid',
+        gridTemplateColumns: 'auto 1fr',
+        columnGap: '2rem',
+      }}
+    >
+      <nav style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
         <NavLink
-          to='/'
+          to=''
           className={({ isActive }) => (isActive ? 'primary' : 'black')}
         >
-          Home
+          Stats
         </NavLink>
+
         <NavLink
-          to='/about'
+          to='about'
           className={({ isActive }) => (isActive ? 'primary' : 'black')}
         >
           About
         </NavLink>
         <NavLink
-          to='/products'
+          to='profile'
           className={({ isActive }) => (isActive ? 'primary' : 'black')}
         >
-          Products
+          Profile
         </NavLink>
+        <button onClick={() => setCurrentUser(null)} className='btn'>
+          logout
+        </button>
       </nav>
       <Outlet />
-      <footer>footer</footer>
     </main>
   )
 }
 
-export default PageLayout
+export default Dashboard

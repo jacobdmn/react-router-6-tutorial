@@ -7,7 +7,7 @@ const SingleProducts = () => {
 
   return (
     <div>
-      <img src={image} style={{ width: '200px', height: '150px' }} />
+      <img src={image} style={{ width: '200px', height: '150px' }} alt={name} />
       <h5>{name}</h5>
       <Link to='/products'>back to products</Link>
     </div>

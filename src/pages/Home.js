@@ -1,5 +1,11 @@
+import { Link } from 'react-router-dom'
 function Home() {
-  return <h4>home page</h4>
+  return (
+    <div>
+      <h5>home page</h5>
+      <Link to='/login'>Login Here</Link>
+    </div>
+  )
 }
 
 export default Home
